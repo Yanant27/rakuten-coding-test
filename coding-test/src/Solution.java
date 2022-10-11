@@ -10,7 +10,7 @@ class Solution {
         
         List<Integer> shortest = new ArrayList();
         while (binarian > 0) {
-        	int temp = (int) log2(binarian);
+        	int temp = log2(binarian);
 //        	 System.out.println(temp);
         	shortest.add(temp);
         	binarian -= Math.pow(2, temp);
@@ -18,8 +18,8 @@ class Solution {
 		return shortest.size();
     }
 
-    private double log2(int x) {
-        return Math.log(x) / Math.log(2);
+    private int log2(int x) {
+        return (int) (Math.log(x) / Math.log(2));
     }
     
     public static void main(String[] args) {
